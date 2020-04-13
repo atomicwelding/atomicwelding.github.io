@@ -1,3 +1,12 @@
+@font-face{
+    font-family: dos;
+    src: url(../fonts/dos.ttf);
+}
+
+body {
+    font-family: dos;
+}
+
 #sticky-nav{
     display: block;
     position: fixed;
@@ -5,14 +14,20 @@
     left: 0%;
     height: 80px;
     width:100%;
-
-    padding-top: 10px;
-    padding-left: 40%;
   
     border-bottom: dotted;
 
     /*debug*/
     /* background-color: bisque; */
+    
+}
+
+#title{
+    position:relative;
+    top:50%;
+    left:50%;
+    width:25%;
+    transform: translate(-50%,-50%);
 }
 
 #main-content{
@@ -20,17 +35,40 @@
     position: fixed;
     top: 100px;
     left: 0%;
-
     width:100%;
-
     padding-left: 30px;
-
     font-size:20px;
 
     /*debug*/
     /* background-color: red; */
 }
 
-a, a:visited{
+#main-content #menu-right {
+    min-height:300px;
+    max-height:500px;
+    
+    padding-left: 3%;
+    
+    border-style:dotted;
+    border-radius:15px;
+    background-color: #afafaf;
+    
+    color:#fff;
+
+    //-webkit-text-stroke-width:0.5px;
+    //-webkit-text-stroke-color:#fff;
+}
+
+#main-content a, a:visited {
     color: black;
+}
+
+#menu-right a,a:visited{
+    color:#fff;
+    text-decoration:none;
+}
+
+#menu-right a:hover{
+    color:#0055ff;
+    text-decoration:underline;
 }
